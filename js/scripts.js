@@ -79,28 +79,18 @@ var tenPoint = function(word) {
     return tenPtResults.length * 10;
   }
 };
-// $(document).ready(function() {
 
-//   $("form#encrypt").submit(function(event) {
-//     var message = $("input#message").val();
-//     var result = encrypt(message);
+$(document).ready(function() {
+
+  $("form#wordCheck").submit(function(event) {
+    var word = $("input#word").val();
+    var score = scrabble(word);
 
 
-//     $("span.encrypted-message").text(result);
-//     $("#hide").hide();
-//     $("body").removeClass("agent");
-//     $("body").addClass("black");
-//     $("#result").show();
-//     event.preventDefault();
+    $("span.result").text(score);
+    $("#result").show();
+    event.preventDefault();
 
-//   });
-
-//   $("button#go-back").click(function() {
-//     $("#hide").show();
-//     $("body").addClass("agent");
-//     $("body").removeClass("black");
-//     $("#result").hide();
-//     $("input#message").val("");
-//   });
-// });
+  });
+});
   
